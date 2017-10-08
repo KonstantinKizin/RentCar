@@ -41,16 +41,6 @@ public class ClientDao implements CrudDao<Client,String> {
         return client;
     }
 
-    @Override
-    public void deleteById(String passportInfo) {
-
-        try(Session session = sessionFactory.openSession()){
-            session.beginTransaction();
-            session.delete(passportInfo,Client.class);
-            session.getTransaction().commit();
-        }
-
-    }
 
     @Override
     public void update(Client client) {

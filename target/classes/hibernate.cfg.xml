@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+        <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="connection.url">jdbc:hsqldb:mem: testdb</property>
+        <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+        <property name="connection.username">sa</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="connection.password"></property>
+
+        <mapping resource="Models/Car.hbm.xml"></mapping>
+        <mapping resource="Models/Client.hbm.xml"></mapping>
+        <mapping resource="Models/Order.hbm.xml"></mapping>
+        <mapping resource="Models/OrderItem.hbm.xml"></mapping>
+
+    </session-factory>
+</hibernate-configuration>

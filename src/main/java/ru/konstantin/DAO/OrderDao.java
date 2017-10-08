@@ -51,15 +51,6 @@ public class OrderDao implements CrudDao<Order, Long> {
 
 
 
-    public void deleteById(Long integer) {
-
-        long id = integer;
-        try(Session session = sessionFactory.openSession()){
-            session.beginTransaction();
-            session.delete(id);
-            session.getTransaction().commit();
-        }
-    }
 
     public void update(Order order) {
         try(Session session = sessionFactory.openSession()){

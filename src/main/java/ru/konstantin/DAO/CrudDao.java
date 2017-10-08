@@ -9,8 +9,6 @@ public interface CrudDao<T,V> {
 
     T deleteByObject(T t);
 
-    void deleteById(V v);
-
     void update(T t);
 
     void add(T t);
